@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Platinum Vice — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: roadmap, missables, cited guides, saved progress.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Unofficial fan guide</p>
+      <h1>Platinum Vice</h1>
+      <p class="tagline">The trophy guide and tracker for Leonida — 55 trophies, a roadmap to the platinum, and a guide to each one that cites its sources.</p>
+    </div>
+    <div class="progress-card" id="progressCard">
+      <p class="progress-big"><span id="earnedCount">0</span><span class="progress-of"> / 55 earned</span></p>
+      <div class="progress-bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+      <p class="progress-note" id="progressNote">0% to the platinum</p>
+      <p class="grade-counts" id="gradeCounts"></p>
+    </div>
+  </div>
+  <nav class="tabs" aria-label="Guide sections">
+    <a href="#/checklist" data-view="checklist" class="tab is-active">Checklist</a>
+    <a href="#/roadmap" data-view="roadmap" class="tab">Roadmap</a>
+    <a href="#/missables" data-view="missables" class="tab">Missables <span class="tab-badge" id="missableBadge">19</span></a>
+    <a href="#/sources" data-view="sources" class="tab">Sources &amp; honesty</a>
+  </nav>
+</header>
+
+<main>
+  <section id="view-checklist" class="view is-active" aria-label="Trophy checklist">
+    <div class="toolbar">
+      <label class="search-box"><span class="visually-hidden">Search trophies</span>
+        <input type="search" id="searchInput" placeholder="Search name or description…" autocomplete="off">
+      </label>
+      <div class="chips" id="kindChips" role="group" aria-label="Filter by kind">
+        <button type="button" class="chip is-active" data-kind="all">All 55</button>
+        <button type="button" class="chip" data-kind="story">Story</button>
+        <button type="button" class="chip" data-kind="missable">Missable</button>
+        <button type="button" class="chip" data-kind="collectible">Collectibles</button>
+        <button type="button" class="chip" data-kind="activity">Activities</button>
+        <button type="button" class="chip" data-kind="online">Online</button>
+      </div>
+      <label class="grade-filter">Grade
+        <select id="gradeSelect">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="spoiler-toggle"><input type="checkbox" id="spoilerToggle"> Hide story spoilers</label>
+      <div class="io-buttons">
+        <button type="button" id="exportBtn">Export progress</button>
+        <button type="button" id="importBtn">Import progress</button>
+        <input type="file" id="importFile" accept=".json,application/json" hidden>
+      </div>
+    </div>
+    <p class="list-meta" id="listMeta"></p>
+    <ol class="trophy-list" id="trophyList"></ol>
+    <p class="empty-state" id="emptyState" hidden></p>
+  </section>
+
+  <section id="view-roadmap" class="view" aria-label="Roadmap to the platinum">
+    <h2>The road to the platinum</h2>
+    <p class="view-intro">Four stages, built from the official descriptions: story first, then activities, then the long counters, then cleanup. The platinum is Stage 4's last step, not a stage of its own.</p>
+    <ol class="roadmap" id="roadmapList"></ol>
+    <p class="time-note" id="timeNote"></p>
+  </section>
+
+  <section id="view-missables" class="view" aria-label="Missable trophies">
+    <h2>Missables — read this first</h2>
+    <div class="warning-box" id="missableWarning"></div>
+    <p class="view-intro">Every trophy below is tied to a single story moment. Earn it when you reach that moment; do not leave it for after the credits.</p>
+    <ol class="trophy-list" id="missableList"></ol>
+  </section>
+
+  <section id="view-sources" class="view" aria-label="Sources and honesty">
+    <h2>Sources &amp; honesty</h2>
+    <p class="view-intro" id="honestyNote"></p>
+    <h3>Where each fact comes from</h3>
+    <ul class="source-list" id="sourceList"></ul>
+    <h3>How this guide is built</h3>
+    <ul class="build-notes">
+      <li>Trophy names, descriptions and grades are shown exactly as PlayStation publishes them.</li>
+      <li>Every guide is written for this entry, in its own words. A source is cited, never copied.</li>
+      <li>A guide gives no credit to a location or step it cannot cite — where no published walkthrough pins one down yet, the guide says so.</li>
+      <li>Progress is saved in your browser (localStorage) and never leaves your machine. Export and import are local files.</li>
+      <li>This app works with the network off and fetches nothing at run time. No Rockstar logo, artwork or game screenshot is used.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>Platinum Vice is an unofficial fan guide. Not affiliated with Rockstar Games, Take-Two Interactive or Sony Interactive Entertainment. Trophy names and descriptions are shown as PlayStation publishes them. Grand Theft Auto and Rockstar Games are trademarks of their owners.</p>
+  <p>List: 55 trophies — 1 platinum, 2 gold, 6 silver, 46 bronze. 28 hidden on PlayStation until earned. No online trophies. Game released 19 November 2026.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
